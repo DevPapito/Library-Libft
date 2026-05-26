@@ -25,26 +25,30 @@ $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 code:
+	@clear
 	@echo "============================\n"
 	@echo  "status: Code created!\n"
 	@echo "============================\n"
 	@echo "test.c created of sucess!\n"
 	@echo "#include \"libft.h\"\nint main (void)\n{\n\n  return(0);\n}" > test.c
+	@mkdir $(SRC_DIR)
 
 test: $(NAME)
+	@clear
 	@echo "============================\n"
 	@echo  "status: Test genereted!\n"
 	@echo "============================\n"
 	@echo "./program_test.out created of sucess!\n"
 	@$(AR) $(NAME) $(OBJS) -o $(NAME)
 	@$(CC) $(SRC_TEXT) -L. -lft -o program_test
-	@mkdir $(SRC_DIR)
 	@mv *.o bin/
+	./program_test
 
 clean:
 	@$(RM) $(OBJS)
 
 fclean: clean
+	@clear
 	@$(RM) $(NAME)
 	@rm -rf $(SRC_DIR)
 	@rm -rf program_test test.c
