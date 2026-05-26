@@ -1,3 +1,7 @@
+## Other languages
+
+<a href="README.pt-br.md">Readme pt-br</a>
+
 ## Development team
 
 The project was developed by Pietro Ezio, intranet nickname pezio

@@ -1,3 +1,7 @@
+## Outras linguagens
+
+<a href="README.md">Readme original</a>
+
 ## Equipe de desenvolvimento
 O projeto foi desenvolvido por Pietro Ezio, nick da intranet pezio
 
