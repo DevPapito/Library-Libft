@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pezio <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/25 18:58:07 by pezio             #+#    #+#             */
-/*   Updated: 2026/05/26 18:32:02 by pezio            ###   ########.fr       */
+/*   Created: 2026/05/26 17:54:31 by pezio             #+#    #+#             */
+/*   Updated: 2026/05/26 17:59:39 by pezio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
+void	ft_putstr_fd(char *s, int fd)
+{
+	size_t	i;
 
-void	ft_putchar_fd(char c, int fd); // 42 function unistd.h
-void	ft_putstr_fd(char *s, int fd); // 42 functions unistd.h
-void	ft_putendl_fd(char *s, int fd); // 42 functions unistd.h
-void	ft_putnbr_fd(int nb, int fd); // 42 functions unistd.h
-#endif
+	i = 0;
+	while (s[i] != '\0')
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
+}

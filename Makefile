@@ -11,7 +11,10 @@ CFLAGS = -Wall -Wextra -Werror -std=c99
 RM = rm -f
 AR = ar rcs
 
-SRCS = hi.c
+SRCS = ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c
 
 OBJS = $(SRCS:.c=.o)
 

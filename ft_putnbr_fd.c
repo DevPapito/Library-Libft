@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pezio <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/25 18:58:07 by pezio             #+#    #+#             */
-/*   Updated: 2026/05/26 18:32:02 by pezio            ###   ########.fr       */
+/*   Created: 2026/05/26 18:13:50 by pezio             #+#    #+#             */
+/*   Updated: 2026/05/26 18:25:04 by pezio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
+void	ft_putnbr_fd(int n, int fd)
+{
+	long	nl;
+	char	c;
 
-void	ft_putchar_fd(char c, int fd); // 42 function unistd.h
-void	ft_putstr_fd(char *s, int fd); // 42 functions unistd.h
-void	ft_putendl_fd(char *s, int fd); // 42 functions unistd.h
-void	ft_putnbr_fd(int nb, int fd); // 42 functions unistd.h
-#endif
+	nl = (long)n;
+	if (nl < 0)
+	{
+		nl *= -1;
+		ft_putchar_fd('-', fd);
+	}
+	if (nl >= 10)
+		ft_putnbr_fd(nl / 10, fd);
+	c = nl % 10 + '0';
+	ft_putchar_fd(c, fd);
+}

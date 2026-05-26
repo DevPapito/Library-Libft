@@ -40,6 +40,23 @@ Here will be the detailing field about what is done
 
 Here will stay the list of project functions in .md format
 
+May 26 - 18:50
+Maked 42 functions using low-level library Unistd.h
+
+The "_fd" is meaning File Descriptor, the function using file descriptors to write in personalized file descriptor
+
+* putchar_fd
+Put a char in respective file descriptor
+
+* putstr_fd
+Put a pointer of chars in respective file descriptor
+
+* putendl_fd
+Make equal putstr_fd but add new line with char "'\n'" in end file
+
+* putnbr_fd
+Transform with recursive method numbers integer to equals but in ascii and put in respective file descriptor
+
 ## Project sources
 
 For this project these X sources were used for the development
