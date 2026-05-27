@@ -14,7 +14,14 @@ AR = ar rcs
 SRCS = ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c
+		ft_putnbr_fd.c \
+		ft_isalpha.c \
+		ft_isdigit.c \
+		ft_isalnum.c \
+		ft_isprint.c \
+		ft_tolower.c \
+		ft_toupper.c \
+		ft_isascii.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -33,7 +40,7 @@ code:
 	@echo  "status: Code created!\n"
 	@echo "============================\n"
 	@echo "test.c created of sucess!\n"
-	@echo "#include \"libft.h\"\nint main (void)\n{\n\n  return(0);\n}" > test.c
+	@echo "#include <stdio.h>\n#include \"libft.h\"\nint main (void)\n{\n\n  return(0);\n}" > test.c
 	@mkdir $(SRC_DIR)
 
 test: $(NAME)

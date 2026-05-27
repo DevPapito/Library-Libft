@@ -57,6 +57,34 @@ Make equal putstr_fd but add new line with char "'\n'" in end file
 * putnbr_fd
 Transform with recursive method numbers integer to equals but in ascii and put in respective file descriptor
 
+May 26 21:51
+Maked Ctype and Ctype POXIS functions to libft
+
+Pattern Ctype
+
+* isalpha
+Verify the char is a alphabetic character
+
+* isdigit
+Verify the char is a numeric character
+
+* isalnum
+Verify the char is a alhabetic or numeric character
+
+* isprint
+Verify the char is a printable character
+
+* tolower
+Transform the char upper in lower char
+
+* toupper
+Transform the char lower in upper char
+
+Pattern Ctype POXIS
+
+* isascii
+Verify the char is a character of ascii table
+
 ## Project sources
 
 For this project these X sources were used for the development
