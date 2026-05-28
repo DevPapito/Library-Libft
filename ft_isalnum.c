@@ -6,13 +6,13 @@
 /*   By: pezio <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 19:33:11 by pezio             #+#    #+#             */
-/*   Updated: 2026/05/26 19:59:32 by pezio            ###   ########.fr       */
+/*   Updated: 2026/05/28 03:02:33 by pezio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int	c)
+int	ft_isalnum(int c)
 {
 	if (!(ft_isalpha(c) || ft_isdigit(c)))
 		return (0);
