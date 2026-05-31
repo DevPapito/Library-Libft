@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pezio <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/26 20:54:02 by pezio             #+#    #+#             */
-/*   Updated: 2026/05/29 23:01:24 by pezio            ###   ########.fr       */
+/*   Created: 2026/05/31 15:51:09 by pezio             #+#    #+#             */
+/*   Updated: 2026/05/31 16:01:11 by pezio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static	int	ft_isupper(int c)
-{
-	if (!(c >= 'A' && c <= 'Z'))
-		return (0);
-	return (1);
-}
+#include "libft.h"
 
-int	ft_tolower(int c)
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	if (!(ft_isupper(c) == 1))
-		return (c);
-	c += 32;
-	return (c);
+	size_t	i;
+	char	*pointer;
+
+	if (s == NULL || f == NULL)
+		return (NULL);
+	pointer = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (pointer == NULL)
+		return (NULL);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		pointer[i] = (*f)(i, s[i]);
+		i++;
+	}
+	pointer[i] = '\0';
+	return (pointer);
 }

@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pezio <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/26 20:54:02 by pezio             #+#    #+#             */
-/*   Updated: 2026/05/29 23:01:24 by pezio            ###   ########.fr       */
+/*   Created: 2026/05/28 21:46:18 by pezio             #+#    #+#             */
+/*   Updated: 2026/05/28 22:07:51 by pezio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static	int	ft_isupper(int c)
-{
-	if (!(c >= 'A' && c <= 'Z'))
-		return (0);
-	return (1);
-}
+#include "libft.h"
 
-int	ft_tolower(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (!(ft_isupper(c) == 1))
-		return (c);
-	c += 32;
-	return (c);
+	size_t			i;
+	unsigned char	character;
+
+	if (c == '\0')
+	{
+		i = ft_strlen(s);
+		return ((char *)&s[i]);
+	}
+	character = (unsigned char)c;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == character)
+			return ((char *)&s[i]);
+		i++;
+	}
+	return (NULL);
 }

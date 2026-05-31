@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pezio <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/26 20:54:02 by pezio             #+#    #+#             */
-/*   Updated: 2026/05/29 23:01:24 by pezio            ###   ########.fr       */
+/*   Created: 2026/05/29 22:49:45 by pezio             #+#    #+#             */
+/*   Updated: 2026/05/29 22:50:35 by pezio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static	int	ft_isupper(int c)
-{
-	if (!(c >= 'A' && c <= 'Z'))
-		return (0);
-	return (1);
-}
+#include "libft.h"
 
-int	ft_tolower(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if (!(ft_isupper(c) == 1))
-		return (c);
-	c += 32;
-	return (c);
+	ft_memset(s, 0, n);
 }

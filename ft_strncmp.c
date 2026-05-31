@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pezio <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/26 20:54:02 by pezio             #+#    #+#             */
-/*   Updated: 2026/05/29 23:01:24 by pezio            ###   ########.fr       */
+/*   Created: 2026/05/28 18:04:48 by pezio             #+#    #+#             */
+/*   Updated: 2026/05/28 18:48:49 by pezio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static	int	ft_isupper(int c)
-{
-	if (!(c >= 'A' && c <= 'Z'))
-		return (0);
-	return (1);
-}
+#include "libft.h"
 
-int	ft_tolower(int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (!(ft_isupper(c) == 1))
-		return (c);
-	c += 32;
-	return (c);
+	size_t	i;
+
+	if (s1 == NULL || s2 == NULL || n == 0)
+		return (0);
+	i = 0;
+	while (i < n - 1 && s1[i] == s2[i])
+		i++;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

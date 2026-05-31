@@ -85,25 +85,6 @@ Pattern Ctype POXIS
 * isascii
 Verify the char is a character of ascii table
 
-May 28 20:46
-Maked string.h low-level functions to libft
-
-Pattern string.h
-
-* memset
-Charge value in void *s of a size_t n
-
-* memcpy
-Copy memory to other void * pointer reference
-
-* memmove
-Move memory to void *dest of void *src pointer
-
-* memchr
-Search a c character in const void *s pointer
-
-* memcmp
-Comper n character bettewen const void *s1 and const void *s2
 ## Project sources
 
 For this project these X sources were used for the development

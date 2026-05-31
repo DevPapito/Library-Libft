@@ -6,20 +6,20 @@
 /*   By: pezio <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 21:28:33 by pezio             #+#    #+#             */
-/*   Updated: 2026/05/26 21:31:02 by pezio            ###   ########.fr       */
+/*   Updated: 2026/05/29 23:00:20 by pezio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static	int	ft_isupper(int c)
+static	int	ft_islower(int c)
 {
-	if (!(c >= 'A' && c <= 'Z'))
+	if (!(c >= 'a' && c <= 'z'))
 		return (0);
 	return (1);
 }
 
 int	ft_toupper(int c)
 {
-	if (ft_isupper(c) == 1)
+	if (!(ft_islower(c) == 1))
 		return (c);
 	c -= 32;
 	return (c);
