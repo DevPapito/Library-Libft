@@ -6,7 +6,7 @@
 /*   By: pezio <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 18:58:07 by pezio             #+#    #+#             */
-/*   Updated: 2026/05/31 16:12:27 by pezio            ###   ########.fr       */
+/*   Updated: 2026/06/03 15:06:45 by pezio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ int		ft_isascii(int c); // POXIS
 // Stdlib.h
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_atoi(const char *nptr);
+
+// Win32/64
+char	*ft_itoa(int n);
 
 // String.h low-level
 void	*ft_memset(void *s, int c, size_t n);
