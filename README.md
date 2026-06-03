@@ -127,13 +127,10 @@ Use a function in char to char of a string
 Use a function in char to char of a string with pointers
 
 * split
-Create a string pointer to strings of a string
+Create a string pointer to strings of a string and spliting substring of a major string
 
 * bzero
 Clean all unsigned chars to zero ascoo
-
-* calloc
-Make a alocation and pre clean memory alocated
 
 * strlen
 Count elements into a string
@@ -157,6 +154,22 @@ Search a c character in const void *s pointer
 
 * memcmp
 Comper n character bettewen const void *s1 and const void *s2
+
+Jun 3 16:17
+Maked stdlib.h and Win32/64 functions to libft
+
+Pattern stdlib.h
+
+* calloc
+Make a alocation and pre clean memory alocated
+
+* atoi
+Transform a string to integer value
+
+Pattern win32/64 
+
+* itoa
+Transform integer value to a string
 
 ## Project sources
 
