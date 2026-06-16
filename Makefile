@@ -6,7 +6,7 @@ SRC_TEXT = test.c
 NAME := libft.a
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -std=c99
+CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
 AR = ar rcs
@@ -44,7 +44,16 @@ SRCS = ft_putchar_fd.c \
 		ft_split.c \
 		ft_itoa.c \
 		ft_bzero.c \
-		ft_calloc.c
+		ft_calloc.c \
+		ft_lstnew.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_front.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c
 
 OBJS = $(SRCS:.c=.o)
 
