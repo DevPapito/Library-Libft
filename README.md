@@ -171,6 +171,43 @@ Pattern win32/64
 * itoa
 Transform integer value to a string
 
+Jun 16 17:22
+Maked 42 functions single-linked list to libft
+
+Pattern 42 functions single-linked list
+
+To create
+
+* lstnew
+Inicialize a clean new node
+
+* lstlast
+Its goes entire single-linked list and return the last node of single-linked list
+
+To push
+
+* lstadd_front
+Add new node in side front of single-linked list
+
+* lstadd_back
+Add new node in side back of single-linked list
+
+To pop
+
+* lstdelone
+Remove just one node and your content
+
+* lstclear
+Remove all nodes in single-linked list and your contents
+
+To interaction
+
+* lstiter
+Its goes single-linked list applying param function
+
+* lstmap
+Create new single-linked list by old single-linked list but if fail clean all existing nodes
+
 ## Project sources
 
 For this project these X sources were used for the development
